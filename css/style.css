@@ -6,6 +6,7 @@
   --light-text-color: #757575;
   --text-color: #212121;
   --card-set-gap: 30px;
+  --links-color: #afb1b8;
 }
 body {
   font-family: roboto;
@@ -86,7 +87,21 @@ li > a:focus {
 .header-contact:hover {
   color: var(--accent-color);
 }
+
+.header-contact > svg {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  fill: var(--light-text-color);
+}
+
+.header-contact:hover > svg,
+.header-contact:focus > svg {
+  fill: var(--accent-color);
+}
+
 .header-contact {
+  color: var(--light-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -134,7 +149,8 @@ header {
 .firstBlock {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--block-bg-color);
+  background-image: url(/first-page-bg/img-overlay.png),
+    url(/first-page-bg/img.png);
 }
 h1 {
   height: 120px;
@@ -192,6 +208,20 @@ li > p {
   line-height: 1.714;
 }
 
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.svg-advantages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--bg-color);
+  margin-bottom: 30px;
+}
 /* =============END ADVANTAGES BLOCK============= */
 .whatWeDo-list {
   display: flex;
@@ -219,14 +249,6 @@ li > p {
 .team .container h2 {
   text-align: center;
   margin-bottom: 50px;
-}
-
-.portfolio-list > .portfolio-item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-  font-size: 18px;
-  outline: 1px solid #eeeeee;
 }
 
 h2 {
@@ -269,6 +291,83 @@ h2 {
   color: var(--light-text-color);
 }
 
+.social-links-team {
+  width: 206px;
+  height: 44px;
+  margin: 16px 32px 30px 32px;
+}
+.social-links-team-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  border-radius: 50px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: var(--white-color);
+}
+
+.social-link svg {
+  fill: var(--links-color);
+  width: 20px;
+  height: 20px;
+}
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.client-list-iteam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--links-color);
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+}
+.client-list-iteam svg {
+  width: 79px;
+  height: 52px;
+  fill: var(--links-color);
+}
+
+.client-list-iteam:hover svg,
+.client-list-iteam:focus svg {
+  fill: var(--accent-color);
+}
+
+.client-list-iteam:hover,
+.client-list-iteam:focus {
+  border-color: var(--accent-color);
+}
+
+.clients h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-section {
+  background-color: var(--white-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* =============END TEAM BLOCK============== */
 
 .list-btn {
@@ -313,6 +412,12 @@ h2 {
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list > .portfolio-item {
