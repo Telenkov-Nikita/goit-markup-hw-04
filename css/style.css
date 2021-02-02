@@ -86,7 +86,8 @@ li > a:focus {
   color: var(--light-text-color);
   transition: color 0.2s linear;
 }
-.header-contact:hover {
+.header-contact:hover,
+.header-contact:focus {
   color: var(--accent-color);
   transition: color 0.2s linear;
 }
@@ -98,6 +99,13 @@ li > a:focus {
   fill: var(--light-text-color);
 }
 
+.header-contact .svg {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: var(--light-text-color);
+}
+
 .header-contact:hover > svg,
 .header-contact:focus > svg {
   fill: var(--accent-color);
@@ -105,6 +113,8 @@ li > a:focus {
 }
 
 .header-contact {
+  display: flex;
+  align-items: center;
   color: var(--light-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
@@ -139,7 +149,7 @@ header .container {
 }
 
 header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 /* =========== END HEADER ============= */
@@ -153,11 +163,16 @@ header {
 .firstBlock {
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 100%;
+  height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/first-page-bg/img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 h1 {
   height: 120px;
@@ -393,18 +408,17 @@ h2 {
 .list-btn-item {
   height: 38px;
   padding: 6px 22px;
-
   cursor: pointer;
   background: var(--bg-color);
   border: 0;
   border-radius: 4px;
-}
-
-.list-btn-item {
   font-weight: 500;
   font-size: 16px;
+}
+.list-btn > .list:not(:last-child) {
   margin-right: 9px;
 }
+
 .list-btn-item:hover,
 .list-btn-item:focus {
   background-color: var(--accent-color);
@@ -472,6 +486,7 @@ h4 {
 footer .container {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 }
 footer {
   background: var(--block-bg-color);
@@ -508,15 +523,14 @@ address a {
 .join {
   display: flex;
   flex-direction: column;
-  padding-left: 70px;
-  padding-top: 12px;
+  margin-left: 70px;
 }
 .join span {
   text-transform: uppercase;
   color: var(--white-color);
   font-size: 14px;
   font-weight: 700;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .social-links-footer {
